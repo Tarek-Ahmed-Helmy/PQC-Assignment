@@ -4,6 +4,7 @@
 #define TK_SQRT_W 33
 #define TK_W 22
 #define NEG(X) (TK_Q - (X))
+#define VEC_SIZE (TK_K * TK_N)
 
 static void toyFillSmall(short *buf, int n);
 void toyPolyMulNaive(short *dst, const short *a, const short *b, int add);
@@ -14,3 +15,4 @@ static void toyAdd(short *dst, const short *v1, const short *v2, int count, int 
 void GEN(short *A, short *t, short *s);
 void ENC(const short *A, const short *t, int plain, short *u, short *v);
 int DEC(const short *s, const short *u, const short *v);
+void printBin(int n, int n_bits);
